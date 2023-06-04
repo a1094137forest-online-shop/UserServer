@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package ShopServer;
+
+option go_package = "./ShopServer";
+
+service ShopServer{
+    rpc CreateShop(CreateShopReq) returns (CreateShopResp);
+}
+
+message CreateShopReq{
+    string Account = 1;
+}
+
+message CreateShopResp{
+    int64 Code = 1;
+    string Msg = 2;
+}

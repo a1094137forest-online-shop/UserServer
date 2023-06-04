@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package UserServer;
+
+option go_package = "./UserServer";
+
+import "onlineShop.proto";
+
+service UserServer{
+    rpc CreateUser(CreateUserReq)returns(CreateUserResp);
+    rpc GetUser(GetUserReq)returns(GetUserResp);
+}
+
